@@ -75,7 +75,7 @@ A **complete full-stack event management application** built with modern technol
 - Node.js (v16 or higher)
 - npm (v8 or higher)
 - PostgreSQL (v12 or higher)
-- Git
+
 
 ### 🖥️ Backend Setup
 
@@ -90,14 +90,7 @@ A **complete full-stack event management application** built with modern technol
    npm install
    ```
 
-3. **Database Setup**
-   - Ensure PostgreSQL is running
-   - Create a new database:
-     ```sql
-     CREATE DATABASE event_management;
-     ```
-
-4. **Configure Environment**
+3. **Configure Environment**
    ```bash
    cp .env.example .env
    ```
