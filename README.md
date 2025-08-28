@@ -239,7 +239,6 @@ npm start
 
 #### **Database: PostgreSQL**
 - **Why PostgreSQL?**: Advanced features, JSON support, excellent performance
-- **Alternatives Considered**: MySQL, MongoDB
 - **Decision Factor**: Data integrity requirements, complex queries needed
 
 #### **Authentication: JWT + bcrypt**
