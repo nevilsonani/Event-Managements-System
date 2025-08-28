@@ -1,0 +1,242 @@
+.event-list {
+  padding: 20px 0;
+}
+
+.loading {
+  text-align: center;
+  padding: 60px 40px;
+  font-size: 1.2rem;
+  color: #666;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  border-radius: 20px;
+  margin: 20px 0;
+}
+
+.loading::before {
+  content: '⏳';
+  display: block;
+  font-size: 3rem;
+  margin-bottom: 20px;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+.error {
+  text-align: center;
+  padding: 40px;
+  font-size: 1.2rem;
+  color: #d32f2f;
+  background: linear-gradient(135deg, #ffebee 0%, #ffcdd2 100%);
+  border-radius: 20px;
+  margin: 20px 0;
+  border: 1px solid #f44336;
+}
+
+.error::before {
+  content: '❌';
+  display: block;
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.event-list h1 {
+  text-align: center;
+  margin-bottom: 40px;
+  color: #333;
+  font-size: 2.5rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 700;
+}
+
+.no-events {
+  text-align: center;
+  padding: 60px 20px;
+  color: #666;
+}
+
+.no-events p {
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.events-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 25px;
+  margin-top: 30px;
+}
+
+.event-card {
+  background: white;
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  border: 1px solid #e9ecef;
+  position: relative;
+  overflow: hidden;
+}
+
+.event-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #667eea, #764ba2, #f093fb);
+}
+
+.event-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.event-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 15px;
+}
+
+.event-header h3 {
+  color: #333;
+  font-size: 1.4rem;
+  margin: 0;
+  flex: 1;
+  margin-right: 15px;
+}
+
+.capacity-badge {
+  background-color: #28a745;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.capacity-badge.full {
+  background-color: #dc3545;
+}
+
+.event-description {
+  color: #666;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.event-details {
+  margin-bottom: 25px;
+}
+
+.detail {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+  color: #555;
+}
+
+.detail .icon {
+  margin-right: 10px;
+  font-size: 16px;
+}
+
+.event-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
+
+.event-actions .btn {
+  min-width: 140px;
+}
+
+.creator-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+  padding-top: 15px;
+  border-top: 1px solid #e9ecef;
+  width: 100%;
+  justify-content: center;
+}
+
+.creator-actions .btn {
+  min-width: 100px;
+  font-size: 12px;
+  padding: 8px 16px;
+}
+
+/* Registration Status Styles */
+.registration-status {
+  font-size: 14px;
+  font-weight: 600;
+  padding: 8px 16px;
+  border-radius: 20px;
+  text-align: center;
+  min-width: 120px;
+}
+
+.status-registered {
+  background: linear-gradient(45deg, #28a745, #20c997);
+  color: white;
+  box-shadow: 0 4px 15px rgba(40, 167, 69, 0.3);
+}
+
+.status-available {
+  background: linear-gradient(45deg, #007bff, #6610f2);
+  color: white;
+  box-shadow: 0 4px 15px rgba(0, 123, 255, 0.3);
+}
+
+/* Enhanced Event Actions */
+.event-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+  margin-top: 20px;
+  width: 100%;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .event-list h1 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+  }
+
+  .events-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .event-card {
+    padding: 20px;
+  }
+
+  .event-header {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .event-header h3 {
+    margin-right: 0;
+  }
+
+  .registration-status {
+    font-size: 12px;
+    padding: 6px 12px;
+    min-width: 100px;
+  }
+}
