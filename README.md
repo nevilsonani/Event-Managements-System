@@ -19,13 +19,13 @@ A **complete full-stack event management application** built with modern technol
 
 ## ✨ What We've Built
 
-### ✅ **Core Features - 100% Complete**
+### ✅ **Core Features **
 
 | Feature | Status | Description |
 |---------|--------|-------------|
-| **User Authentication** | ✅ **COMPLETE** | JWT-based registration and login |
-| **Event Management** | ✅ **COMPLETE** | Full CRUD operations with creator permissions |
-| **Event Registration** | ✅ **COMPLETE** | Capacity-limited registration with duplicate prevention |
+| **User Authentication**  | JWT-based registration and login |
+| **Event Management**  | Full CRUD operations with creator permissions |
+| **Event Registration**  | Capacity-limited registration with duplicate prevention |
 | **Capacity Management** | ✅ **COMPLETE** | Real-time availability tracking |
 | **Advanced Search** | ✅ **COMPLETE** | Search by keyword, location, and date range |
 | **User Dashboard** | ✅ **COMPLETE** | Statistics, profile management, and quick actions |
