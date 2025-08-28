@@ -11,9 +11,7 @@ A **complete full-stack event management application** built with modern technol
 - [🛠️ Tech Stack](#️-tech-stack)
 - [🚀 Quick Setup](#-quick-setup)
 - [🏃‍♂️ Running the Application](#️-running-the-application)
-- [🧪 Testing Your Setup](#-testing-your-setup)
-- [🎯 How to Use](#-how-to-use)
-- [🔧 Development](#-development)
+
 
 ---
 
