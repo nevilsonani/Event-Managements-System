@@ -2,7 +2,6 @@
 
 A **complete full-stack event management application** built with modern technologies. Users can create events, register for events, and manage event capacity with a beautiful, responsive UI.
 
-![Event Management System](https://img.shields.io/badge/Status-Complete-brightgreen)
 
 ---
 
