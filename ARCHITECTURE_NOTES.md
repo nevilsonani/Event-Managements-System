@@ -1,4 +1,4 @@
-# 🏗️ Event Management System - Architecture Notes
+#  Event Management System - Architecture Notes
 
 ---
 
