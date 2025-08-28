@@ -69,67 +69,149 @@ A **complete full-stack event management application** built with modern technol
 ---
 
 
-## 🚀 Quick Setup
+## 🚀 Complete Setup Guide
 
-### Step 1: Clone & Install
-```bash
-# Clone the repository
-git clone https://github.com/nevilsonani/Event-Managements-System.git
-cd event-management-system
+### Prerequisites
+- Node.js (v16 or higher)
+- npm (v8 or higher)
+- PostgreSQL (v12 or higher)
+- Git
 
-# Install all dependencies
-npm run install-all
-```
+### 🖥️ Backend Setup
 
+1. **Clone the Repository**
+   ```bash
+   git clone https://github.com/nevilsonani/Event-Managements-System.git
+   cd event-management-system/backend
+   ```
 
-### Step 2: Configure Environment
-```bash
-# Copy environment template
-cp backend/env.example backend/.env
+2. **Install Dependencies**
+   ```bash
+   npm install
+   ```
 
-# Edit with your credentials
-nano backend/.env
-```
+3. **Database Setup**
+   - Ensure PostgreSQL is running
+   - Create a new database:
+     ```sql
+     CREATE DATABASE event_management;
+     ```
 
-**Required Environment Variables:**
-```env
-# Database Configuration
-DB_HOST=localhost
-DB_PORT=5432
-DB_NAME=event_management
-DB_USER=your_postgres_username
-DB_PASSWORD=your_postgres_password
+4. **Configure Environment**
+   ```bash
+   cp .env.example .env
+   ```
+   
+   Edit `.env` with your configuration:
+   ```env
+   # Database
+   DB_HOST=localhost
+   DB_PORT=5432
+   DB_NAME=event_management
+   DB_USER=your_db_user
+   DB_PASSWORD=your_db_password
+   
+   # JWT
+   JWT_SECRET=your_secure_jwt_secret
+   JWT_EXPIRES_IN=24h
+   
+   # Server
+   PORT=5000
+   NODE_ENV=development
+   
+   # CORS
+   FRONTEND_URL=http://localhost:3000
+   ```
 
-# JWT Configuration
-JWT_SECRET=your_super_secret_jwt_key_here_change_in_production
-JWT_EXPIRES_IN=24h
+5. **Run Database Migrations**
+   ```bash
+   npm run db:setup
+   ```
 
-# Server Configuration
-PORT=5000
-NODE_ENV=development
+6. **Start Backend Server**
+   ```bash
+   npm start
+   ```
+   - API will be available at: http://localhost:5000/api
 
-# CORS Configuration
-FRONTEND_URL=http://localhost:3000
-```
+### 💻 Frontend Setup
 
+1. **Navigate to Frontend Directory**
+   ```bash
+   cd ../frontend
+   ```
 
-### Step 3: Initialize Database
-```bash
-# Setup database tables and indexes
-cd backend
-npm run db:setup
-cd ..
-```
+2. **Install Dependencies**
+   ```bash
+   npm install
+   ```
 
-### Step 4: Start Application
-```bash
-# Start both frontend and backend
-npm run dev
-```
+3. **Configure Environment**
+   ```bash
+   cp .env.example .env
+   ```
+   
+   Edit `.env`:
+   ```env
+   REACT_APP_API_URL=http://localhost:5000
+   ```
 
-**🎉 Your application is now running!**
-- **Frontend**: http://localhost:3000
-- **Backend API**: http://localhost:5000/api
+4. **Start Development Server**
+   ```bash
+   npm start
+   ```
+   - Frontend will be available at: http://localhost:3000
+
+### 🚀 Running Both Servers
+
+1. **Using Concurrently (Recommended)**
+   From project root:
+   ```bash
+   npm run install-all  # Installs both frontend and backend deps
+   npm run dev         # Starts both servers
+   ```
+
+2. **Separate Terminals**
+   - Terminal 1 (Backend):
+     ```bash
+     cd backend
+     npm start
+     ```
+   - Terminal 2 (Frontend):
+     ```bash
+     cd frontend
+     npm start
+     ```
+
+### 🔍 Verifying the Setup
+
+1. **Check Backend**
+   ```bash
+   curl http://localhost:5000/api/health
+   # Should return: {"status":"OK"}
+   ```
+
+2. **Check Frontend**
+   - Open http://localhost:3000 in your browser
+   - You should see the application home page
+
+### 🔧 Troubleshooting
+
+- **Database Connection Issues**
+  - Verify PostgreSQL is running
+  - Check database credentials in `.env`
+  - Ensure user has proper permissions
+
+- **Port Conflicts**
+  - Change `PORT` in `.env` if 5000/3000 are in use
+  - Update CORS and frontend API URLs accordingly
+
+- **Dependency Issues**
+  ```bash
+  # In both frontend and backend:
+  rm -rf node_modules package-lock.json
+  npm install
+  ```
 
 ---
 
