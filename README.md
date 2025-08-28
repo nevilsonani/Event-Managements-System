@@ -19,21 +19,21 @@ A **complete full-stack event management application** built with modern technol
 
 ## ✨ What We've Built
 
-### ✅ **Core Features **
+### ✅ Core Features 
 
 | Feature  | Description |
 |---------|-------------|
-| **User Authentication**= | JWT-based registration and login |
+| **User Authentication** | JWT-based registration and login |
 | **Event Management**  | Full CRUD operations with creator permissions |
-| **Event Registration** | ✅ **COMPLETE** | Capacity-limited registration with duplicate prevention |
-| **Capacity Management** | ✅ **COMPLETE** | Real-time availability tracking |
-| **Advanced Search** | ✅ **COMPLETE** | Search by keyword, location, and date range |
-| **User Dashboard** | ✅ **COMPLETE** | Statistics, profile management, and quick actions |
-| **Beautiful UI** | ✅ **COMPLETE** | Cloud-themed design with animations |
-| **Notification System** | ✅ **COMPLETE** | Toast notifications replacing browser alerts |
-| **Mobile Responsive** | ✅ **COMPLETE** | Works perfectly on all devices |
-| **Input Validation** | ✅ **COMPLETE** | Frontend + backend validation |
-| **Security Features** | ✅ **COMPLETE** | Rate limiting, CORS, security headers |
+| **Event Registration**  | Capacity-limited registration with duplicate prevention |
+| **Capacity Management**  | Real-time availability tracking |
+| **Advanced Search**  | Search by keyword, location, and date range |
+| **User Dashboard**  | Statistics, profile management, and quick actions |
+| **Beautiful UI**  | Cloud-themed design with animations |
+| **Notification System**  | Toast notifications replacing browser alerts |
+| **Mobile Responsive**  | Works perfectly on all devices |
+| **Input Validation**  | Frontend + backend validation |
+| **Security Features**  | Rate limiting, CORS, security headers |
 
 ### 🎯 **Key Requirements Met**
 
